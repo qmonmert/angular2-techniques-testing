@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       {{title}}
     </h1>
     <hr>
-    <app-joke></app-joke>
+    <router-outlet></router-outlet>
   `
 })
 export class AppComponent {

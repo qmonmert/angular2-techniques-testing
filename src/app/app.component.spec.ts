@@ -1,7 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
+import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
 import { JokeComponent } from './chucknorris/joke/joke.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { JokeService } from './chucknorris/joke.service';
 
 describe('AppComponent', () => {
@@ -9,10 +12,17 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        JokeComponent
+        JokeComponent,
+        PageNotFoundComponent
       ],
-      imports: [ HttpModule ],
-      providers: [ JokeService ]
+      imports: [ 
+        HttpModule, 
+        AppRoutingModule 
+      ],
+      providers: [ 
+        JokeService, 
+        { provide: APP_BASE_HREF, useValue: '/' } 
+      ]
     });
     TestBed.compileComponents();
   });
@@ -35,4 +45,5 @@ describe('AppComponent', () => {
     let compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('app works!');
   }));
+  
 });
