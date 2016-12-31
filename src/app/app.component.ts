@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
       {{title}}
     </h1>
     <hr>
+    <nav>
+      <a routerLink="/joke" routerLinkActive="active" class="nav-jokes">Jokes</a>
+      <a routerLink="/page-not-found" routerLinkActive="active" class="nav-page-not-found">Page Not Found</a>
+    </nav>
+    <hr>
     <router-outlet></router-outlet>
   `
 })
