@@ -1,14 +1,18 @@
-/* tslint:disable:no-unused-variable */
-
 import { TestBed, async } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { JokeComponent } from './chucknorris/joke/joke.component';
+import { JokeService } from './chucknorris/joke.service';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        JokeComponent
       ],
+      imports: [ HttpModule ],
+      providers: [ JokeService ]
     });
     TestBed.compileComponents();
   });
