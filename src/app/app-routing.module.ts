@@ -7,6 +7,10 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'joke' },
   { path: 'joke', component: JokeComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
+  {
+    path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule',
+    data: { preload: true }
+  },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent }
 ];
 

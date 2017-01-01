@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { JokeComponent } from './chucknorris/joke/joke.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
