@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
       <a routerLink="/joke" routerLinkActive="active" class="nav-jokes">Jokes</a>
       <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       <a routerLink="/dashboard/sub" routerLinkActive="active">Subdashboard</a>
+      <a routerLink="/admin-auth" routerLinkActive="active">Admin (auth)</a>
+      <a routerLink="/admin-not-auth" routerLinkActive="active">Admin (not auth)</a>
       <a routerLink="/page-not-found" routerLinkActive="active" class="nav-page-not-found">Page Not Found</a>
     </nav>
     <hr>
